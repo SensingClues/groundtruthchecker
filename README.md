@@ -1,17 +1,16 @@
-# groundtruthchecker
-helper tool to update your ground truth status map
+Check collected ground truth against required ground truth
+and create a new map layer that people can use in the field (in Cluey) to collect the remaining points.
 
-Land use mapping based on ESA Land Cover classes. 
+INSTRUCTIONS (for macOS)
+open terminal
+bash
+cd Documents/SensingClues/groundtruthchecker
 
-PROCESS
-BLC provides polygon delineating the Area of Responsibility
-3edata experts make a map layer with training points that need to be visited (training points map)
+#if needed
+    pip3 install flask
+#end of if needed
 
-The training points map is loaded into the Cluey Data Collector
-BLC staff use the app to visit these locations are assign their respective ESA classes
+python3 app.py
 
-This ground truth checker is used to regularly update the training points map (remove all points that have been visited and classified)
-
-
-
-This is a project run by Life Connected, Sensing Clues and 3edata.
+See msg in the console: "Running on http://127.0.0.1:5002" 
+Note that this address may differ from time to time
